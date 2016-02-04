@@ -11,20 +11,11 @@
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-    <h3>Popular Products</h3>
-    <ul>
-        @foreach($popularProducts as $popularProduct)
-
-        <li>{{ $popularProduct['name'] }} at {{ $popularProduct['price'] }} each</li>
-
-        @endforeach
-    </ul>
-
-    <h3>Other Products</h3>
+    <h3>Products</h3>
     <ul>
         @foreach($products as $product)
 
-        <li>{{ $product['name'] }} at {{ $product['price'] }} each</li>
+        <li>{{ $product['name'] }} at ${{ $product['price'] }} each. <small>({{ $product['stock'] }} in stock)</small></li>
 
         @endforeach
     </ul>
