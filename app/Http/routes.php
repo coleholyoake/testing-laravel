@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('home'); 
 });
 
-Route::get('/products', function () {
-	return view('products');
-});
+Route::get('/products', 'ProductsController@index');
 
 Route::get('/about', function () {
 	return view('about');
@@ -26,6 +24,11 @@ Route::get('/about', function () {
 Route::get('/contact', function () {
 	return view('contact');
 });
+
+Route::post('/contact', function () {
+	return 'sent';
+});
+
 
 /*
 |--------------------------------------------------------------------------

@@ -3,14 +3,32 @@
 @section('content')
 
 <div class="content">
-    <img src="https://placehold.it/1500x250">
-    <h1>Home</h1>
+    <h1>Products</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <h3>Popular Products</h3>
+    <ul>
+        @foreach($popularProducts as $popularProduct)
+
+        <li>{{ $popularProduct['name'] }} at {{ $popularProduct['price'] }} each</li>
+
+        @endforeach
+    </ul>
+
+    <h3>Other Products</h3>
+    <ul>
+        @foreach($products as $product)
+
+        <li>{{ $product['name'] }} at {{ $product['price'] }} each</li>
+
+        @endforeach
+    </ul>
+
 </div>
 
 @endsection
