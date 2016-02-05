@@ -19,18 +19,21 @@
                 box-sizing: border-box;
             }
             nav {
-                padding: 20px;
+                padding: 30px;
             }
             nav ul, nav ul li {
                 list-style: none;
                 display: inline;
-                margin: 20px;
+                margin: 10px;
+            }
+            ul {
+                padding-left: 0px;
             }
             a {
                 text-decoration: none;
             }
             footer {
-                background-color: #f3f3f3;
+                /*background-color: #f3f3f3;*/
                 padding: 10px 50px;
             }
             .content {
@@ -42,11 +45,15 @@
             input, textarea {
                 margin-bottom: 20px;
             }
+            span {
+                color: red;
+            }
 
         </style>
     </head>
     <body>
         <nav>
+            <img src="http://placehold.it/80x40">
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/products">Products</a></li>
@@ -57,7 +64,9 @@
         
         @yield('content')
 
+
         <footer>
+        <hr>
             <p><small>&copy; Copyright 2016</small></p>
         </footer>
     </body>

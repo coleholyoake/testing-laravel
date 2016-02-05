@@ -9,16 +9,17 @@
     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-    <h3>Products</h3>
+    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+    
     <ul>
         @foreach($products as $product)
 
-        <li>{{ $product['name'] }} at ${{ $product['price'] }} each. <small>({{ $product['stock'] }} in stock)</small></li>
+        <li>{{ $product['name'] }} &nbsp; &nbsp; <small><a href="/products/{{ $product->id }}">(see more)</a></small></li>
 
         @endforeach
     </ul>
+    <br>
+    <a href="/products/create">+ Add product</a>
 
 </div>
 

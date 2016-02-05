@@ -13,7 +13,7 @@
     		<label for="message">Message:</label>
     		<textarea name="message" id="message" cols="30" rows="10"></textarea>
     	</div>
-    	<input type="submit" value="send">
+    	<input type="submit" value="Send">
     </form>
 </div>
 
